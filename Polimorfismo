@@ -1,0 +1,89 @@
+public class Animal {
+    public virtual void Sonido() {
+        Console.WriteLine("Animal hace un sonido");
+    }
+}
+
+public class Perro : Animal {
+    public override void Sonido() {
+        Console.WriteLine("Guau");
+    }
+}
+
+public class Gato : Animal {
+    public override void Sonido() {
+        Console.WriteLine("Miau");
+    }
+}
+
+// Uso del polimorfismo con herencia
+Animal animal = new Animal();
+Perro perro = new Perro();
+Gato gato = new Gato();
+
+animal.Sonido(); // "Animal hace un sonido"
+perro.Sonido(); // "Guau"
+gato.Sonido(); // "Miau"
+
+Animal[] animales = new Animal[3];
+animales[0] = new Animal();
+animales[1] = new Perro();
+animales[2] = new Gato();
+
+foreach(Animal a in animales) {
+    a.Sonido();
+}
+public class Animal {
+    public virtual void Sonido() {
+        Console.WriteLine("Animal hace un sonido");
+    }
+}
+
+public class Perro : Animal {
+    public override void Sonido() {
+        Console.WriteLine("Guau");
+    }
+}
+
+public class Gato : Animal {
+    public override void Sonido() {
+        Console.WriteLine("Miau");
+    }
+}
+
+// Uso del polimorfismo con herencia
+Animal animal = new Animal();
+Perro perro = new Perro();
+Gato gato = new Gato();
+
+animal.Sonido(); 
+perro.Sonido(); 
+gato.Sonido(); 
+
+Animal[] animales = new Animal[3];
+animales[0] = new Animal();
+animales[1] = new Perro();
+animales[2] = new Gato();
+
+foreach(Animal a in animales) {
+    a.Sonido();
+}
+public class Calculadora {
+    public int Sumar(int a, int b) {
+        return a + b;
+    }
+
+    public int Sumar(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public double Sumar(double a, double b) {
+        return a + b;
+    }
+}
+
+// Uso del polimorfismo con sobrecarga de métodos
+Calculadora calc = new Calculadora();
+Console.WriteLine(calc.Sumar(1, 2)); 
+Console.WriteLine(calc.Sumar(1, 2, 3)); 
+Console.WriteLine(calc.Sumar(1.5, 2.5)); 
